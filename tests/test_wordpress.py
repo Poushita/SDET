@@ -32,11 +32,11 @@ def test_wordpress_theme_search(driver):
         EC.visibility_of_element_located((By.ID, "wp-block-search__input-8"))
     )
     search_box.clear()
-    search_box.send_keys("Astra")
+    search_box.send_keys("beach")
     search_box.send_keys(Keys.ENTER)
 
     # Take screenshot (optional)
     driver.save_screenshot("theme_search_result.png")
 
     # 4. Verify theme name is displayed
-    assert "Astra" in driver.page_source
+    assert "beach" in driver.page_source
